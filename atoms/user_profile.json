@@ -1,0 +1,21 @@
+{
+  "title": "UserProfile",
+  "type": "object",
+  "description": "A simple template (called an Atom) that teaches your AI exactly what information it needs to collect when creating a 'User Profile'.",
+  "properties": {
+    "username": {
+      "type": "string",
+      "description": "The unique name the user chooses for themselves."
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "The user's email address. We use this to contact them."
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": ["username", "email"]
+}
