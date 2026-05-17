@@ -1,6 +1,6 @@
 # 🌱 Sprawl Demo DNA
 
-Welcome to the **Demo DNA Repository** for the [Sprawl CLI](https://https://github.com/w3bwizart/sprawl-cli)!
+Welcome to the **Demo DNA Repository** for the [Sprawl CLI](https://github.com/w3bwizart/sprawl-cli)!
 
 Whether you are a seasoned software engineer or someone just starting to experiment with AI coding assistants (like Claude Code or Cursor), this repository is built for you.
 
