@@ -1,5 +1,10 @@
 # 🛡️ Demo Security Rule
 
+<!-- 
+SPRAWL TIP: The Sprawl CLI injects this exact text into the AGENTS.md file. 
+Use imperative, strict language here. The AI will treat this document as its absolute law. 
+-->
+
 ## What is a Rule?
 
 Rules act as safe boundaries for your AI. Instead of hoping your AI behaves correctly, you can use a Rule file to explicitly tell it what it is allowed (and not allowed) to do.
