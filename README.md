@@ -1,48 +1,95 @@
-# 🌱 Sprawl Demo DNA
 
-Welcome to the **Demo DNA Repository** for the [Sprawl CLI](https://github.com/w3bwizart/sprawl-cli)!
 
-Whether you are a seasoned software engineer or someone just starting to experiment with AI coding assistants (like Claude Code or Cursor), this repository is built for you.
+<div align="center">
 
-Think of **Sprawl** as a way to organize your AI's brain. A **DNA repository** like this one is simply a collection of instructions, rules, and personalities that you can quickly "inject" into your AI projects to make them smarter and more predictable.
+<img src="https://sprawl.software/assets/Sprawl.software-logo.png" alt="Sprawl.software" width="280">
 
-This repo is a completely safe, zero-friction sandbox. It's designed to let you play with Sprawl's core features—like the `init`, `fetch-dna`, and `sync` commands—without having to build complex AI architectures from scratch.
+**Developer infrastructure for AI agent containment, telemetry, and workspace governance.**
 
-## 📦 What's Inside?
+# Demo DNA Repository
 
-This DNA contains five simple, harmless building blocks (which represent the core pillars of the Sprawl ecosystem):
+A ready-to-use reference DNA for learning Sprawl CLI's configuration architecture.
 
-- **Atom** (`atoms/user_profile.json`): Atoms are templates that teach your AI how to structure data. This one shows what a standard "User Profile" should look like.
-- **Molecule** (`molecules/local-filesystem-mcp.json`): Molecules connect your AI to the outside world. This example gives the AI the ability to safely interact with your local computer files.
-- **Persona/Skill** (`skills/persona-demo_engineer/SKILL.md`): Skills give your AI a unique personality and specific expertise. Meet the "Demo Engineer"!
-- **Rule** (`rules/demo_security.md`): Rules set safe boundaries. This file teaches your AI what it can and cannot do.
-- **Workflow** (`workflows/demo_build.md`): Workflows are step-by-step recipes that guide your AI to complete tasks consistently.
+[Sprawl CLI](https://github.com/sprawl-software/sprawl-cli) · [Documentation](https://sprawl.software/docs/) · [Website](https://sprawl.software)
 
-## 🚀 How to Try It Out
+---
 
-Ready to see it in action? You can securely clone this DNA into your local setup by running:
+</div>
+
+## Overview
+
+A **DNA repository** is a Git-hosted registry of reusable agent configurations — rules, skills, personas, atoms, molecules, and workflows — that Sprawl compiles into native IDE settings and MCP schemas.
+
+This demo DNA provides a minimal, working example of every configuration type in the Sprawl ecosystem. Use it to test `sprawl init`, `sprawl add`, and `sprawl sync` without building a full governance architecture from scratch.
+
+## What's Inside
+
+| Type | File | Purpose |
+|---|---|---|
+| **Atom** | `atoms/user_profile.json` | A structured data template defining a standard user profile schema |
+| **Molecule** | `molecules/local-filesystem-mcp.json` | An MCP server configuration granting scoped local filesystem access |
+| **Skill / Persona** | `skills/persona-demo_engineer/SKILL.md` | A persona definition with activation triggers, tone directives, and evaluation protocols |
+| **Rule** | `rules/demo_security.md` | A security boundary rule defining what agents can and cannot access |
+| **Workflow** | `workflows/demo_build.md` | A step-by-step execution recipe for deterministic task completion |
+
+These map directly to the [Atomic Agentic Fabric (AFF)](https://github.com/w3bwizart/atomic-agentic-fabric-specification) specification.
+
+## Quick Start
+
+### 1. Initialize the Demo DNA
+
+Clone this registry into your local Sprawl hub:
 
 ```bash
-sprawl init https://github.com/w3bwizart/atomic-agentic-fabric-demo-dna.git
+sprawl init https://github.com/sprawl-software/atomic-agentic-fabric-demo-dna.git
 ```
 
-Next, create a fresh workspace (a playground for your AI) and add these demo pieces:
+### 2. Create a Test Workspace
 
 ```bash
-sprawl create my-test-workspace
-cd my-test-workspace
+sprawl create demo-workspace
+cd demo-workspace
+```
 
-# Mix and match the pieces you want your AI to use!
+### 3. Add Components
+
+Select which configurations to inject into your workspace:
+
+```bash
 sprawl add user_profile.json local-filesystem-mcp.json demo_security.md persona-demo_engineer
 ```
 
-That's it! You've just organized your AI's behavior in seconds. Dive into the files in this repository to see how human-readable and accessible they are!
+### 4. Compile & Bind
 
-## 🚀 Next Steps (Graduating the Sandbox)
+```bash
+sprawl sync
+sprawl bind
+```
 
-Now that you've seen how Sprawl works with the Demo DNA, you are ready to create your own!
+Your workspace is now governed. Run `sprawl status` to inspect the active configuration.
 
-1. Delete the `my-test-workspace` folder you just made.
-2. Go to your own blank Git repository.
-3. Run `sprawl init <YOUR_OWN_GIT_URL>`.
-4. Start writing your own rules, skills, and personas to build your private AI brain!
+## Next Steps
+
+Once you've explored the demo, build your own DNA:
+
+1. Remove the demo workspace: `sprawl ws remove demo-workspace --delete`
+2. Create a new Git repository for your team's DNA registry
+3. Run `sprawl init <YOUR_GIT_URL>` to register it
+4. Write your own rules, skills, and personas — see the [documentation](https://sprawl.software/docs/) for the full schema reference
+
+## Part of the Sprawl Ecosystem
+
+- **[Sprawl CLI](https://github.com/sprawl-software/sprawl-cli)** — Core engine for workspace sandboxing and configuration governance
+- **Demo DNA** ← *you are here*
+- **[Atomic Agentic Fabric](https://github.com/w3bwizart/atomic-agentic-fabric-specification)** — Open-source specification this DNA implements
+- **[Website](https://github.com/sprawl-software/website-sprawl-software)** — Product site at [sprawl.software](https://sprawl.software)
+
+## License
+
+[MIT](LICENSE) — Free to use, fork, and extend.
+
+---
+
+<div align="center">
+<sub>Part of the <a href="https://github.com/sprawl-software">Sprawl.software</a> platform · Built in Antwerp 🇧🇪</sub>
+</div>
