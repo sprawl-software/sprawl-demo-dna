@@ -28,9 +28,13 @@ This demo DNA provides a minimal, working example of every configuration type in
 |---|---|---|
 | **Atom** | `atoms/user_profile.json` | A structured data template defining a standard user profile schema |
 | **Molecule** | `molecules/local-filesystem-mcp.json` | An MCP server configuration granting scoped local filesystem access |
-| **Skill / Persona** | `skills/persona-demo_engineer/SKILL.md` | A persona definition with activation triggers, tone directives, and evaluation protocols |
-| **Rule** | `rules/demo_security.md` | A security boundary rule defining what agents can and cannot access |
-| **Workflow** | `workflows/demo_build.md` | A step-by-step execution recipe for deterministic task completion |
+| **Skill / Scaffolding** | `skills/create-rule/SKILL.md` | Autonomous rule scaffolder for creating new prescriptive & descriptive rules |
+| **Skill / Scaffolding** | `skills/create-skill/SKILL.md` | Autonomous skill scaffolder for building and extending agent capabilities |
+| **Skill / Persona** | `skills/persona-demo_engineer/SKILL.md` | Platform enablement persona verifying governance injection and diagnostics |
+| **Skill / Persona** | `skills/persona-senior_python_architect/SKILL.md` | Rigorous engineering persona enforcing PEP-8 and performance optimizations |
+| **Rule** | `rules/demo_security.md` | Workstation security boundary forbidding AI access to credentials & private keys |
+| **Rule** | `rules/python_stdlib_only.md` | Architectural constraint enforcing zero-dependency Python standard library |
+| **Workflow** | `workflows/demo_build.md` | Deterministic verification build and test execution checklist |
 
 These map directly to the [Atomic Agentic Fabric (AFF)](https://github.com/w3bwizart/atomic-agentic-fabric-specification) specification.
 
@@ -38,10 +42,10 @@ These map directly to the [Atomic Agentic Fabric (AFF)](https://github.com/w3bwi
 
 ### 1. Initialize the Demo DNA
 
-Clone this registry into your local Sprawl hub:
+Clone this registry into your local Sprawl hub (or simply run `sprawl init` with no arguments):
 
 ```bash
-sprawl init https://github.com/sprawl-software/atomic-agentic-fabric-demo-dna.git
+sprawl init https://github.com/sprawl-software/sprawl-demo-dna.git
 ```
 
 ### 2. Create a Test Workspace

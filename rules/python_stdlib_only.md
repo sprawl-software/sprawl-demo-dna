@@ -1,17 +1,34 @@
-# 🐍 Real-World Example: Python Stdlib-Only Constraint
+---
+name: "Python Standard Library Only"
+type: "rule"
+domain: "engineering"
+version: "1.0.0"
+description: "Strict architectural constraint forbidding third-party pip dependencies in favor of Python standard library primitives."
+globs:
+  - "**/*.py"
+alwaysApply: false
+---
+
+# 🐍 Python Standard Library Only Constraint
 
 <!-- 
-SPRAWL TIP: This is a "Real-World" example of an architectural constraint. 
-When an AI agent reads this file, it permanently modifies its behavior. It will stop trying to install external packages like 'requests' or 'numpy' and will only use built-in Python tools.
+SPRAWL RULE: When Sprawl binds this rule, the AI permanently restricts its Python implementation patterns.
+It will refuse third-party packages and construct performant, zero-dependency alternatives.
 -->
 
-## Context
-Our environment is highly locked down. To reduce our security surface area and ensure our application runs natively on any machine without complex virtual environments, we strictly prohibit third-party dependencies.
+## 1. Primary Directive
+Our environment is strictly locked down to eliminate external attack surfaces, supply-chain risks, and environment drift. You are strictly forbidden from generating code that requires `pip install` or external package dependencies.
 
-## Directives
-1. **Zero External Dependencies:** You are strictly forbidden from writing code that requires `pip install`.
-2. **Standard Library Only:** You must implement all functionality using the Python standard library. 
-   - Instead of `requests`, use `urllib.request`.
-   - Instead of `pydantic`, use `dataclasses` and native type hinting.
-   - Instead of `pytest`, use `unittest`.
-3. **Refusal Protocol:** If a user explicitly asks you to use an external library, you must refuse, cite this rule, and offer the stdlib alternative.
+## 2. Standard Library Mapping Protocol
+Implement all system functionality using Python Standard Library modules exclusively:
+- **Networking & HTTP:** Use `urllib.request`, `urllib.parse`, and `http.client` (never `requests` or `httpx`).
+- **Data Models & Schemas:** Use `@dataclasses.dataclass` and native `typing` (never `pydantic` or `attrs`).
+- **Testing:** Use `unittest` and `unittest.mock` (never `pytest`).
+- **JSON & Data Structures:** Use `json`, `csv`, `sqlite3`, and `collections`.
+- **Async & Concurrency:** Use `asyncio`, `concurrent.futures`, and `threading`.
+
+## 3. Refusal & Alternative Protocol
+If a user or prompt explicitly asks you to import or install a third-party library, you must:
+1. Respectfully refuse the external package installation.
+2. Cite this rule: `rules/python_stdlib_only.md`.
+3. Provide the full, working drop-in replacement using the Python Standard Library.

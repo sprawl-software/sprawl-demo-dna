@@ -5,8 +5,10 @@
       "args": [
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "/absolute/path/to/demo/workspace"
-      ]
+        "${WORKSPACE_ROOT}"
+      ],
+      "env": {},
+      "description": "Scoped local filesystem MCP server confining agent file tools strictly to the active workspace root."
     }
   }
 }
