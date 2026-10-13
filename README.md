@@ -16,7 +16,7 @@ A ready-to-use reference DNA for learning Sprawl CLI's configuration architectur
 
 ## Overview
 
-A **DNA repository** is a Git-hosted registry of reusable agent configurations - rules, skills, personas, atoms, molecules, and workflows - that Sprawl compiles into native IDE settings and MCP schemas.
+A **DNA repository** is a Git-hosted registry of reusable agent configurations - rules, skills, personas, and workflows - that Sprawl compiles into native IDE settings and agent contexts.
 
 This demo DNA provides a working suite of standard configurations in the Sprawl ecosystem. Use it to test `sprawl init`, `sprawl add`, and `sprawl sync` without building a full governance architecture from scratch.
 
@@ -24,8 +24,6 @@ This demo DNA provides a working suite of standard configurations in the Sprawl 
 
 | Type | File | Purpose |
 |---|---|---|
-| **Atom** | `atoms/user_profile.json` | A structured data template defining a standard user profile schema |
-| **Molecule** | `molecules/local-filesystem-mcp.json` | An MCP server configuration granting scoped local filesystem access |
 | **Rule** | `rules/engineering.md` | Standard software engineering principles, double-diamond planning, and verification gates |
 | **Rule** | `rules/python.md` | Pythonic core operations: structural typing, protocols, and stdlib-first architecture |
 | **Rule** | `rules/web_development.md` | Modern web frontend architecture: semantic HTML5, pure CSS variables, and Native Web Components |
@@ -66,7 +64,7 @@ cd demo-workspace
 Select which configurations to inject into your workspace:
 
 ```bash
-sprawl add user_profile.json local-filesystem-mcp.json engineering.md security.md persona-master-engineer
+sprawl add engineering.md security.md persona-master-engineer demo_build.md
 ```
 
 ### 4. Compile & Bind
