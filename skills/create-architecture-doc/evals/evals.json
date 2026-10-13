@@ -1,0 +1,44 @@
+[
+  {
+    "id": "CAD-001",
+    "name": "full_architecture_spec",
+    "prompt": "Generate an Architecture.md document with Mermaid diagrams for a local Python CLI tool.",
+    "patterns_required": [
+      "(?i)(tech stack|directory structure|components)",
+      "(?i)(graph td|mermaid)"
+    ],
+    "patterns_forbidden": [
+      "\\u2014"
+    ],
+    "require_mermaid": true,
+    "require_valid_markdown": true
+  },
+  {
+    "id": "CAD-002",
+    "name": "data_flow_mapping",
+    "prompt": "Generate a Mermaid system flow diagram mapping command line execution to internal engine modules.",
+    "patterns_required": [
+      "(?i)(data flow|system flow|subsystems)",
+      "(?i)(entry point|modules|graph)"
+    ],
+    "patterns_forbidden": [
+      "\\u2014"
+    ],
+    "require_mermaid": true,
+    "require_valid_markdown": true
+  },
+  {
+    "id": "CAD-003",
+    "name": "orchestration_repo_adaptation",
+    "prompt": "Generate an architecture overview for an agentic configuration repository containing skills and rules.",
+    "patterns_required": [
+      "(?i)(configuration|orchestration|dna)",
+      "(?i)(rules|skills|mcp)"
+    ],
+    "patterns_forbidden": [
+      "\\u2014"
+    ],
+    "require_mermaid": true,
+    "require_valid_markdown": true
+  }
+]

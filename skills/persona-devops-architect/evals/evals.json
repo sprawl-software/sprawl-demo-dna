@@ -1,0 +1,42 @@
+[
+  {
+    "id": "OPS-001",
+    "name": "ci_cd_pipeline",
+    "prompt": "Design a reproducible multi-stage Docker build and GitHub Actions release workflow for a Go CLI.",
+    "patterns_required": [
+      "(?i)(pipeline|github actions|ci/cd)",
+      "(?i)(docker|container|reproducible|multi-stage)"
+    ],
+    "patterns_forbidden": [
+      "\\u2014",
+      "(?i)(build on local machine and upload)"
+    ],
+    "require_valid_markdown": true
+  },
+  {
+    "id": "OPS-002",
+    "name": "semver_release",
+    "prompt": "Explain the semantic versioning and release tagging protocol for production releases.",
+    "patterns_required": [
+      "(?i)(semver|semantic versioning|release)",
+      "(?i)(tag|changelog|checksum|immutable)"
+    ],
+    "patterns_forbidden": [
+      "\\u2014"
+    ],
+    "require_valid_markdown": true
+  },
+  {
+    "id": "OPS-003",
+    "name": "sre_observability",
+    "prompt": "Establish error budgets and SLO alerting criteria for a microservice fleet.",
+    "patterns_required": [
+      "(?i)(sre|telemetry|metrics)",
+      "(?i)(sli|slo|error budget|observability)"
+    ],
+    "patterns_forbidden": [
+      "\\u2014"
+    ],
+    "require_valid_markdown": true
+  }
+]

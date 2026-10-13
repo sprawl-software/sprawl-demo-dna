@@ -1,0 +1,44 @@
+[
+  {
+    "id": "SEC-001",
+    "name": "vulnerability_audit",
+    "prompt": "Audit this python function for security vulnerabilities: def read_file(name): return open('/var/data/' + name).read()",
+    "patterns_required": [
+      "(?i)(cwe-22|path traversal|directory traversal)",
+      "(?i)(sanitize|abspath|pathlib|validation)"
+    ],
+    "patterns_forbidden": [
+      "\\u2014",
+      "(?i)(completely safe|no vulnerability)"
+    ],
+    "require_valid_markdown": true
+  },
+  {
+    "id": "SEC-002",
+    "name": "open_source_license_audit",
+    "prompt": "Our proprietary SaaS product imports and dynamically links an AGPL-3.0 licensed library. Provide an IP and licensing risk assessment.",
+    "patterns_required": [
+      "(?i)(agpl|copyleft|network use)",
+      "(?i)(commercial risk|source disclosure|relicense)"
+    ],
+    "patterns_forbidden": [
+      "\\u2014",
+      "(?i)(no risk|freely link without issue)"
+    ],
+    "require_valid_markdown": true
+  },
+  {
+    "id": "SEC-003",
+    "name": "eu_ai_act_compliance",
+    "prompt": "Evaluate a candidate architecture for an autonomous resume screening agent under the EU AI Act.",
+    "patterns_required": [
+      "(?i)(eu ai act|article 14|high-risk)",
+      "(?i)(human oversight|human-in-the-loop|governance)"
+    ],
+    "patterns_forbidden": [
+      "\\u2014",
+      "(?i)(exempt from oversight|completely unrestricted)"
+    ],
+    "require_valid_markdown": true
+  }
+]

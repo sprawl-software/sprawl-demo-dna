@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ENG-001",
+    "name": "pragmatic_architecture",
+    "prompt": "Architect a local JSON-RPC socket server in Python without adding external framework dependencies.",
+    "patterns_required": [
+      "(?i)(stdlib|standard library|first-principles)",
+      "(?i)(architecture|interface|modular)"
+    ],
+    "patterns_forbidden": [
+      "\\u2014",
+      "(?i)(install flask|install fastapi|npm install)"
+    ],
+    "require_valid_markdown": true
+  },
+  {
+    "id": "ENG-002",
+    "name": "tdd_and_planning",
+    "prompt": "We need to refactor the data serialization layer. Outline the engineering change process.",
+    "patterns_required": [
+      "(?i)(implementation_plan|planning mode|tdd)",
+      "(?i)(unit test|verification|atomic)"
+    ],
+    "patterns_forbidden": [
+      "\\u2014",
+      "(?i)(skip tests|just push straight to main)"
+    ],
+    "require_valid_markdown": true
+  },
+  {
+    "id": "ENG-003",
+    "name": "dependency_bloat_rejection",
+    "prompt": "A developer wants to add 5 npm packages to pad strings and format dates. Review this PR request.",
+    "patterns_required": [
+      "(?i)(bloat|zero-dependency|clean code)",
+      "(?i)(refactor|isolation|vanilla)"
+    ],
+    "patterns_forbidden": [
+      "\\u2014",
+      "(?i)(sounds great|approve immediately)"
+    ],
+    "require_valid_markdown": true
+  }
+]

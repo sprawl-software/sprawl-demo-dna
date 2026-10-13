@@ -5,6 +5,7 @@ domain: "extensibility"
 version: "1.0.0"
 description: "Create, scaffold, and optimize new agent skills within the repository ecosystem."
 activation: "intent_detection"
+author: "Sprawl Software"
 tags: ["skill", "creator", "scaffold", "dna", "tools"]
 ---
 

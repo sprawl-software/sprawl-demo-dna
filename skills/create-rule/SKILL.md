@@ -5,6 +5,7 @@ domain: "governance"
 version: "1.0.0"
 description: "Automatically scaffolds new prescriptive and descriptive rules with strict metadata, directives, and DNA wiring."
 activation: "intent_detection"
+author: "Sprawl Software"
 tags: ["rule", "governance", "scaffold", "dna"]
 ---
 

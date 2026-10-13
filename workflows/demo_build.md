@@ -27,7 +27,7 @@ When triggered to run the verification build, perform these steps sequentially:
 2. Confirm that no protected credential files (`.env`, `*.pem`, `id_rsa`) were created, modified, or staged for commit.
 
 ### Step 2: Code Quality & Constraint Check
-1. If Python files were modified, verify compliance with `rules/python_stdlib_only.md` (zero external pip packages introduced).
+1. If Python files were modified, verify compliance with `rules/python.md` (type hints, stdlib-first architecture).
 2. Check that strict type hinting is present on all new public functions and classes.
 3. Run code formatting and lint verification commands appropriate for the project.
 
